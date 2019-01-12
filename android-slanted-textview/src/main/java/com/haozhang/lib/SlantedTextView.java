@@ -19,10 +19,39 @@ import android.util.Log;
 import android.view.View;
 
 /**
- * 一个倾斜的TextView
+ * 一个倾斜的TextView，可以自定义
  * </p>
+ * <p>
+ *     用法
+ *     1、Layout文件中使用
+ *     <pre>
+ *      &lt;com.haozhang.lib.SlantedTextView
+ *             android:layout_width="54dp"
+ *             android:layout_height="54dp"
+ *             android:layout_gravity="right|top"
+ *             android:gravity="center"
+ *             app:slantedBackgroundColor="#3497fd"
+ *             app:slantedMode="right"
+ *             app:slantedLength="31dp"
+ *             app:slantedTextSize="11sp"
+ *             app:slantedText="@string/talent_account_unbind_watch_corner_marker"
+ *            /&gt;
+ *    </pre>
+ *   Java代码中可以动态设置属性
+ *   <pre class="prettyprint">
+ *       SlantedTextView stv = (SlantedTextView) findViewById(R.id.test);
+ *       stv.setText("PHP")
+ *             .setTextColor(Color.WHITE)
+ *             .setSlantedBackgroundColor(Color.BLACK)
+ *             .setTextSize(18)
+ *             .setSlantedLength(50)
+ *             .setMode(SlantedTextView.MODE_LEFT);
  *
- * @author HaoZhang
+ * </pre>
+ * <p><img width="423" height="702" src="https://img-blog.csdnimg.cn/2019011116222126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxNDQ2MjgyNDEy,size_16,color_FFFFFF,t_70" alt="效果"></p>
+ * <p><img width="540" height="350" src="https://img-blog.csdnimg.cn/20190111211532561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxNDQ2MjgyNDEy,size_16,color_FFFFFF,t_70" alt="自定义的属性"></p>
+ * <p><img width="519" height="716" src="https://img-blog.csdnimg.cn/20190111211543623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxNDQ2MjgyNDEy,size_16,color_FFFFFF,t_70" alt="斜边展示的模式"></p>
+ * @author OuyangPeng
  */
 public class SlantedTextView extends View {
     private static final String TAG = "SlantedTextView";
