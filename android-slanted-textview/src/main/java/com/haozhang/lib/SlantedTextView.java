@@ -94,16 +94,21 @@ public class SlantedTextView extends View {
         int MODE_RIGHT_BOTTOM_TRIANGLE = 7;
     }
 
-
     /**
      * 倾斜模式
      */
     private int mMode = SlantedMode.MODE_LEFT;
 
     /**
+     * 默认倾斜角度
+     */
+    int DEFAULT_SLANTED_DEGREES = 45;
+
+    /**
      * 倾斜角度
      */
-    int ROTATE_ANGLE = 45;
+    int slantedDegrees = 45;
+
 
     /**
      * 背景画笔
@@ -174,6 +179,7 @@ public class SlantedTextView extends View {
         if (array.hasValue(R.styleable.SlantedTextView_slantedMode)) {
             mMode = array.getInt(R.styleable.SlantedTextView_slantedMode, 0);
         }
+        slantedDegrees = array.getInteger(R.styleable.SlantedTextView_slantedDegree, DEFAULT_SLANTED_DEGREES);
         array.recycle();
     }
 
@@ -399,7 +405,7 @@ public class SlantedTextView extends View {
                 xy[1] = rectF.top - mTextPaint.ascent();
                 xy[2] = w / 2;
                 xy[3] = h / 2;
-                xy[4] = -ROTATE_ANGLE;
+                xy[4] = -slantedDegrees;
                 break;
 
             // 右上角的
@@ -415,7 +421,7 @@ public class SlantedTextView extends View {
                 xy[1] = rectF.top - mTextPaint.ascent();
                 xy[2] = w / 2 + offset;
                 xy[3] = h / 2;
-                xy[4] = ROTATE_ANGLE;
+                xy[4] = slantedDegrees;
                 break;
 
             // 左下角的
@@ -432,7 +438,7 @@ public class SlantedTextView extends View {
                 xy[1] = rectF.top - mTextPaint.ascent();
                 xy[2] = w / 2;
                 xy[3] = h / 2 + offset;
-                xy[4] = ROTATE_ANGLE;
+                xy[4] = slantedDegrees;
                 break;
 
             // 右下角的
@@ -448,7 +454,7 @@ public class SlantedTextView extends View {
                 xy[1] = rectF.top - mTextPaint.ascent();
                 xy[2] = w / 2 + offset;
                 xy[3] = h / 2 + offset;
-                xy[4] = -ROTATE_ANGLE;
+                xy[4] = -slantedDegrees;
                 break;
             default:
                 Log.d(TAG, "mode is error!");

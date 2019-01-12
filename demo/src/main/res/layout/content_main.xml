@@ -119,9 +119,10 @@
         app:slantedMode="right"
         app:slantedLength="31dp"
         app:slantedTextSize="11sp"
-        app:slantedText="账号系统"
+        app:slantedText="欧阳鹏"
         android:layout_alignTop="@+id/img_right"
-        android:layout_alignEnd="@+id/img_right"/>
+        android:layout_alignEnd="@+id/img_right"
+        app:slantedDegree = "45"/>
 
     <ImageView
         android:id="@+id/img_right_tri"
