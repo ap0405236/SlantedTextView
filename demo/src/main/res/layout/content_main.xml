@@ -113,13 +113,13 @@
 
     <com.haozhang.lib.SlantedTextView
         android:id="@+id/slv_right"
-        android:layout_width="@dimen/text_height"
-        android:layout_height="@dimen/text_height"
-        app:slantedBackgroundColor="@color/slanted_72"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        app:slantedBackgroundColor="#3497fd"
         app:slantedMode="right"
-        app:slantedLength="@dimen/text_slanted"
-        app:slantedTextSize="10sp"
-        app:slantedText="C++"
+        app:slantedLength="31dp"
+        app:slantedTextSize="11sp"
+        app:slantedText="账号系统"
         android:layout_alignTop="@+id/img_right"
         android:layout_alignEnd="@+id/img_right"/>
 
